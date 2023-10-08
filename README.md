@@ -53,4 +53,22 @@ It returns AI generated response.
 **CreateDescription**
 This Class creates an image, a brief and a long description of a planet, based on the AI generated output, as well as it creates a json file with the output.
   
-  
+## Other routines
+1) CSV generator
+![image](https://github.com/jKrachinski/Virados---NASA-Hackathon/assets/129566256/2319c3b3-d5c7-4e15-8a9d-e6163c2f4c11)
+This function generates a CSV file with data about the planet that will be necessary AI generation.
+2) Data Handler
+![image](https://github.com/jKrachinski/Virados---NASA-Hackathon/assets/129566256/8b174084-f818-4681-bb8a-2ce66b7756d3)
+First this function reads the CSV file data and classifies in categories heat, moisture and height values.
+Then it writes a json file like the one showed in the figure bellow.
+![image](https://github.com/jKrachinski/Virados---NASA-Hackathon/assets/129566256/b1b5b806-8207-41d2-8c98-9bdff6bc8fe6)
+
+## WebPage
+![image](https://github.com/jKrachinski/Virados---NASA-Hackathon/assets/129566256/9357df87-90e4-4ba9-9ad1-3f17caf2046b)
+The Web App that will display all this procedures looks like the one in the past figure. There are some buttons:
+1) Imagens
+   Triggers AI generation function for image
+2) Descricao
+    Triggers AI generation function for text
+3) Novo Planeta
+    Refreshes the page in order to generate a new planet
