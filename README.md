@@ -7,13 +7,13 @@ This project aims to generate by procedural generation a 3d map representing an 
 - AI generated text description about daily life in the planet respecting Astrobiological Concepts
 - AI generated landscape image inside of the planet
 
-#Relevance
+## Relevance
 {HERE SOME TEXT}
 
-#3D Procedural Generation
+## 3D Procedural Generation
 {HERE SOME TEXT}
 
-#AI Generation
+## AI Generation
 {HERE SOME TEXT}
 
   
