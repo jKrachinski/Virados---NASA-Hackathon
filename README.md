@@ -11,7 +11,14 @@ This project aims to generate by procedural generation a 3d map representing an 
 {HERE SOME TEXT}
 
 ## 3D Procedural Generation
-{HERE SOME TEXT}
+3D procedural general routine was based in jongalland World Generator. Few change were make due to satisfie some requisites of this project and match the goal of generating Exoplanets.
+Basically the routine had a few subroutines, just like Minecraft World Generator, the most important for this project are:
+  1) Noise Generation + Height Map
+  2) Heat Map
+  3) Moisture Map
+  4) Biome Generation
+
+### Noise Generation + Height Map
 
 ## AI Generation
 The AI generations was obtained through the Eden AI free API key, in order to generate both images and text descriptions of the 3D envionments. In order to do so, the 3D procedural generetion would create a certain amount of key-words, which would describe the world just generated. These words woulds involve, the average terrain of the planet, the biomes present, humidity, average temperature and other relevant data.
