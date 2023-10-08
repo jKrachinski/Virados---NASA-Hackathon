@@ -34,6 +34,11 @@ The Moistue Map generation were similar to the Heat Map. First, it generated a f
 
 ![image](https://github.com/jKrachinski/Virados---NASA-Hackathon/assets/129566256/8ce64dcf-df67-4452-a21e-e5962f963791)
 
+### Biome generation
+Since Heat Map and Moisture Map are available to provide data, this subroutine uses a classification algorithm using as input Temperature x Moisture and out putting the corresponding Biome (eg. HOT x DRY = Desert). The final map looks like the one presented in this next figure.
+
+![image](https://github.com/jKrachinski/Virados---NASA-Hackathon/assets/129566256/0b328844-71ed-432a-84f4-b8a855f89d47)
+
 ## AI Generation
 The AI generations was obtained through the Eden AI free API key, in order to generate both images and text descriptions of the 3D envionments. In order to do so, the 3D procedural generetion would create a certain amount of key-words, which would describe the world just generated. These words woulds involve, the average terrain of the planet, the biomes present, humidity, average temperature and other relevant data.
 
