@@ -11,7 +11,7 @@ This project aims to generate by procedural generation a 3d map representing an 
 {HERE SOME TEXT}
 
 ## 3D Procedural Generation
-3D procedural general routine was based in jongalland World Generator. Few change were make due to satisfy some requisites of this project and match the goal of generating Exoplanets.
+3D procedural general routine were based on jongalland World Generator. Few change were make due to satisfy some requisites of this project and match the goal of generating Exoplanets.
 Basically the routine had a few subroutines, just like Minecraft World Generator, the most important for this project are:
   1) Noise Generation + Height Map
   2) Heat Map
