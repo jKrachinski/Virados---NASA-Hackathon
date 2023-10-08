@@ -1,0 +1,372 @@
+* {
+    margin:0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+body {
+    background-image: url("../images/fundo_espaco.png");
+    font-family: "Coda Caption";
+}
+.nav {
+    display: flex;
+    padding: 6px 155px 6.084px 49px;;
+    width: 100vw;
+    height: 80px;
+    background: #0a1116;
+    flex-shrink: 0;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+.nav a{
+    overflow: hidden;
+    transform: translateY(-15px);
+}
+
+.nav a img .logo{
+    width: 262px;
+    height: 110px;
+    margin-left:0px;
+}
+
+.nav h2 {
+    color: #F8C300;
+    font-family: "Coda Caption";
+    font-size: 42.642px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    transform: translate(10px, 0px);
+}
+
+.toolbar {
+    position: sticky;
+    display: flex;
+    width: 1920px;
+    height: 40px;
+    padding: 7px 0px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    background: #0a1116;
+}
+.toolbar .typewriter{
+    color: #ffffff;
+    font-family: Changa One;
+    font-size: 18.642px;
+    font-style: normal;
+    font-weight: 10;
+    line-height: normal;
+    transform: translate(-200px, -15px);
+}
+.toolbar .b1 {
+    display: flex;
+    width: 1920px;
+    height: 26px;
+    padding: 3px 0px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    background: #EF233C;
+    flex-direction: row;
+}
+
+
+.toolbar .b1 p{
+    color: #FFF;
+    font-family: Changa One;
+    font-size: 18.858px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    transform: translateX(-180px);
+}
+
+.container {
+    /* Center the content */
+    display: flex;
+    flex-direction: column;
+
+    /* Take full size */
+    width: 100%;
+
+    /* Background */
+    z-index: 0;
+}
+
+.container .centering{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 500px;
+}
+
+.container .planeta {
+    line-height: normal;
+    width: 200px;
+    height: 300px;
+    transform: translate(-100px, 50px);
+}
+
+.container p {
+    display: block;
+    color: #EF233C;
+    font-size: 18.858px;
+    font-style: normal;
+    font-weight: 100;
+    line-height: normal;
+    transform: translateY(10px);
+}
+
+
+.centering h3{
+    color:#F8C300;
+    align-items: start;
+    justify-content: left;
+    transform: translate(-40vw, 15vh);
+}
+
+.bottom{
+    align-content: start;
+    display: flex;
+    justify-content: left;
+}
+
+.bottom h4{
+    color:#F8C300;
+    position:absolute;
+    font-size: 20px;
+    bottom: 50px;
+    left:2vw;
+}
+
+.bottom p{
+    color:#F8C300;
+    font-size: 10px;
+    position:absolute;
+    bottom:40px;
+    left:2vw;
+}
+
+.bottom .buttonImagem{
+    width: 84px;
+    height : 84px;
+    position: absolute;
+    bottom: 40px;
+    right: 300px;
+    background-image: url("../images/imagens_icone.png");
+    border-radius: 5px;
+    background-size: 100%;
+    cursor: pointer;
+    box-shadow: 0 9px #999;
+}
+
+.bottom .buttonDesc{
+    width: 84px;
+    height : 84px;
+    position: absolute;
+    bottom: 40px;
+    right: 200px;
+    background-image: url("../images/descricao_icone.png");
+    background-size: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 9px #999;
+}
+
+.bottom .buttonPlaneta{
+    width: 84px;
+    height : 84px;
+    position: absolute;
+    bottom: 40px;
+    right: 100px;
+    background-image: url("../images/novoPlaneta_icone.png");
+    background-size: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 9px #999;
+}
+
+.bottom .buttonPlaneta:hover{
+    background-color: #0a1116;
+}
+
+.bottom .buttonPlaneta:active{
+    background-color: #0a1116;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+.bottom .buttonDesc:hover{
+    background-color: #0a1116;
+}
+
+.bottom .buttonDesc:active{
+    background-color: #0a1116;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+.bottom .buttonImagem:hover{
+    background-color: #0a1116;
+}
+
+.bottom .buttonImagem:active{
+    background-color: #0a1116;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+.box{
+    width: 30vh;
+    height: 55vh;
+    padding: 10px;
+    border:2px solid #F8C300;
+    margin: 0;
+    position:absolute;
+    bottom:24vh;
+    right:2vw;
+    background-color: #0a1116;
+    opacity: 50%;
+}
+
+.box h5{
+    color: #F8C300;
+    align-items: end;
+    justify-content: left;
+}
+
+/*
+.cursor {
+    display: inline-block;
+    width: 5px;
+    height: 42px;
+    background-color: #fff;
+    animation: blinkCursor 0.7s infinite;
+}
+
+@keyframes blinkCursor {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+}
+
+.container .typewriter{
+    color: #EF233C;
+    font-size: 42.642px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.center {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+}
+
+.wrapper {
+    align-items: center;
+    display: block;
+    justify-content: center;
+    width: 50%;
+    height: 500px;
+}
+
+.phrase-effect {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 500px;
+    z-index: -1;
+}
+
+.typewriter2 {
+    text-align: justify;
+    color: #FFFFFF;
+    font-size: 42.642px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.split-screen {
+    display: flex;
+}
+
+.split-screen__half {
+    flex: 1;
+    background: #0a1116;
+    width: 600px;
+    height: 500px;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.testimonials{
+    background: #0a1116;
+    padding: 40px;
+    height: 500px;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.testimonials h1{
+    text-transform: uppercase;
+    color: white;
+    margin-bottom: 20px;
+    margin-top: 100px;
+}
+
+.pic{
+    width: 160px;
+    height: 160px;
+    position: relative;
+    overflow: hidden;
+    transform: translateX(220px);
+}
+
+.pic img{
+    width: 100%;
+    height:100%;
+    border-radius: 50%;
+
+}
+
+.testimonials h2{
+    text-transform: uppercase;
+    color: gray;
+    margin-top: 10px;
+}
+
+.testimonials p{
+    width: 600px;
+    margin-bottom: 40px;
+    color: #f1f1f1;
+    margin-top: 10px;
+}
+*/
+
+/*.same-height-columns {*/
+/*    display: flex;*/
+/*    transform: translateX(150px);*/
+/*}*/
+
+/*.same-height-columns__column {*/
+/*    flex: 1;*/
+/*    !* Space between columns *!*/
+/*    margin: 0 8px;*/
+
+/*    !* Layout each column *!*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*}*/
+
+/*.same-height-columns__content {*/
+/*    !* Take available height *!*/
+/*    flex: 1;*/
+/*}*/

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | WorldGenerator</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <link rel="stylesheet" href="static/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Coda Caption:800' rel='stylesheet'>
+    <script src="TemplateData/UnityProgress.js"></script>
+    <script src="Build/UnityLoader.js"></script>
+    <script>
+      var gameInstance = UnityLoader.instantiate("gameContainer", "Build/hackaton.json", {onProgress: UnityProgress});
+    </script>
+  </head>
+  <body>
+    <div class="nav">
+      <img class="logo" src="./images/logoPrincipal_icone.png">
+      <h2>Virados</h2>
+      <a link="/">
+      </a>
+  </div>
+  <div class="container">
+    <div class="centering">
+        <h3> Distância: n anos-luz </h3> 
+        <div class="webgl-content">
+          <div id="gameContainer" style="width: 60vw; height: 60vh; overflow: hidden"></div>
+          <div class="footer">
+            <div class="title">WorldGenerator</div>
+          </div>
+        </div>
+        <div class="box">
+          <h5 id='desc' class="descricoes"> lesgo </h5>
+        </div>
+    </div>
+    <div class="bottom">
+        <h4> Nome do Planeta </h4>
+        <p> Descrição Genérica do Planeta </p>
+        <button onclick="changeInfo(0)" id="imagebutton" type="button" class="buttonImagem"></button>
+        <button onclick="changeInfo(1)" id="descbutton" type="button" class="buttonDesc"></button>
+        <button onclick="window.location.reload();" id="planetbutton" type="button" class="buttonPlaneta"></button>
+
+        <script>
+          function changeInfo(index) {
+            if(index == 0) {
+              document.getElementById('desc').innerText = "image"
+            } else if(index == 1) {
+              document.getElementById('desc').innerText = "desc"
+            } else {
+              document.getElementById('desc').innerText = "planet"
+            }
+          }
+          
+        </script>
+    </div>
+  </body>
+</html>
