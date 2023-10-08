@@ -8,7 +8,7 @@ This project aims to generate by procedural generation a 3d map representing an 
 - AI generated landscape image inside of the planet
 
 ## Relevance
-{HERE SOME TEXT}
+This project is relevant to the purporse of this challenge because it presents in an intuitive way relevant data about some exoplanets. This format can help students or the public to learn astrobiology concepts in a hands on approach, generating a planet and studying features about the planet with AI generation to knowledge validation. 3D rendering captures publics attention to the content.
 
 ## 3D Procedural Generation
 3D procedural general routine were based on jongalland World Generator. Few change were make due to satisfy some requisites of this project and match the goal of generating Exoplanets.
