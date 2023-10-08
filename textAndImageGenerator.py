@@ -8,8 +8,8 @@ from datetime import date, datetime, timedelta
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-import matplotlib.pyplot as plt
-import matplotlib.image as mpimg
+import pandas as pd
+import os
 
 headers = {"Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNDUyNTQwYzItZjRmZC00ZTk4LTk5NzEtNDNkMjFkNTQ0NjZhIiwidHlwZSI6ImFwaV90b2tlbiJ9.y5u_w4MIkY4h4aZSej-3i7owPobdLd-H8A0BKCgyuhI"}
 
@@ -35,7 +35,7 @@ def generate_text(prompt : str):
         "providers": "openai,cohere",
         "text": prompt,
         "temperature" : 1,
-        "max_tokens" : 1000
+        "max_tokens" : 1500
         }
 
     response = requests.post(url, json=payload, headers=headers)
@@ -43,26 +43,44 @@ def generate_text(prompt : str):
     result = json.loads(response.text)
     resposta = result['openai']['generated_text']
     print(resposta)
-
-    with open("saida.txt", "w") as file:
-        file.write(resposta)
+    return(resposta)
 
 caracteristicas_do_planeta = "Quente, habitado por vida inteligente no mesmo nível tecnológico atual, grandes quantidades de água, natureza abundante"
-
-palavras_chave = f"exoplaneta, habitável, {caracteristicas_do_planeta}"
-descricao = f"Gere uma descrição realística de como seria morar em um exoplaneta com as seguintes características: {caracteristicas_do_planeta}.\n Essa descrição precisa ter, no mínimo, 500 palavras"
-resumo = f'Gere uma breve descrição de um planeta com as seguintes características: {caracteristicas_do_planeta}'
-
-
-
-#generate_text(descricao)
-img_link = generate_image(palavras_chave)
 
 options = Options()
 options.add_experimental_option("detach", True)
 
-# é utilizado o chrome para enviar as mensagens
-driver = webdriver.Chrome(options=options)
-driver.get(img_link)
-driver.implicitly_wait(600)
-driver.close()
+class CreateDescription:
+    def __init__(self, key_words):
+        caracteristicas_do_planeta_para_imagem = f"exoplaneta, habitável, {key_words}"
+        descricao_palavras = f"Gere uma descrição realística e científica de como seria morar em um exoplaneta com as seguintes características: {key_words}.\n A tecnologia neste planeta não é mais avançada que a atual. Essa descrição precisa ter, no mínimo, 500 palavras"
+        resumo_planeta = f'Gere uma breve descrição de um planeta com as seguintes características: {key_words}. Essa descricao deve ser feita em 20 palavras ou menos'
+        
+        imagem_link = generate_image(caracteristicas_do_planeta_para_imagem)
+        descricao_500 = generate_text(descricao_palavras)
+        resuminho = generate_text(resumo_planeta)
+        
+        dictionary = {
+            "500palavras":descricao_500,
+            "descricaoBreve":resuminho,
+            "link_imagem":imagem_link
+        }
+        
+        df = pd.DataFrame(dictionary, index=[0])
+        
+        i = 1
+        while(True):
+            if os.path.isfile(f"generatedResponse{i}.json"):
+                i += 1
+            else:
+                break
+        df.to_json(f"generatedResponse{i}.json")
+        
+        
+        #downloads the AI generated image
+        driver = webdriver.Chrome(options=options)
+        driver.get(imagem_link)
+        driver.implicitly_wait(600)
+        driver.close()
+        
+test = CreateDescription(caracteristicas_do_planeta)
