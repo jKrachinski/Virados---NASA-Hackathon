@@ -19,7 +19,7 @@ def generate_image(prompt : str):
     "providers": "openai",
     "text": prompt,
     "resolution" : "512x512",
-    "num_images": 5
+    "num_images": 1
     }
 
     response = requests.post(url, json=payload, headers=headers)
